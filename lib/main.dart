@@ -90,7 +90,27 @@ class _MyHomePageState extends State<MyHomePage> {
                       color: Colors.grey,
                     ),
                     ),
-                    SizedBox(height: 10.0,)
+                    SizedBox(height: 10.0,),
+                    Row(
+                      children: <Widget>[
+                        FlatButton(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(7.0),
+
+                          ),
+                          color: Color(0xFFFA624F),
+                          onPressed: (){},
+                          child: Text(
+                            'Message',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15.0,
+                              color: Colors.white,
+                            ),
+                          ),
+                        )
+                      ],
+                    )
                   ],
                 ),
               )

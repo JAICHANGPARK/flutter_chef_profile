@@ -84,7 +84,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     SizedBox(height: 7.0,),
                     Text(
-                      'China', style: TextStyle(
+                      'Japan/Tokyo', style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 17.0,
                       color: Colors.grey,

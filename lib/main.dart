@@ -167,8 +167,56 @@ class _MyHomePageState extends State<MyHomePage> {
                 )
               ],
             ),
+          ),
+          
+          // 카드 뷰 
+          
+          SizedBox(height: 10.0,),
+          
+          Column(
+            children: <Widget>[
+              
+              menuCard('Berry banana milkshake', 'assets/bananabreak.jpg', 'Breakfast', 4, 2.8, 1.2),
+
+            ],
           )
+          
         ],
+      ),
+    );
+  }
+
+  Widget menuCard(String title, String imgPath, String type, int rating, double views, double likse){
+    return Padding(
+      padding: EdgeInsets.only(left: 10.0, right: 10.0),
+      child: Material(
+        borderRadius: BorderRadius.circular(7.0),
+        elevation: 4.0,
+        child: Container(
+          height: 125.0,
+          width: double.infinity,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(7.0),
+            color: Colors.white,
+          ),
+
+          child: Row(
+            children: <Widget>[
+              //이미지간 간격
+              SizedBox(width: 10.0,),
+
+              Container(
+                height: 100.0,
+                width: 100.0,
+                decoration: BoxDecoration(
+                  image: DecorationImage(image: AssetImage(imgPath), fit: BoxFit.cover),
+                  borderRadius: BorderRadius.circular(7.0)
+                ),
+              )
+            ],
+          ),
+
+        ),
       ),
     );
   }

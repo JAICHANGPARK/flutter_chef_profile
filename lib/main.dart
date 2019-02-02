@@ -35,7 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 color: Color(0xfffa624f),
               ),
               Align(
-                alignment: Alignment.topCenter,
+                alignment: Alignment.topLeft,
                 child: IconButton(
                   icon: IconButton(
                     icon: Icon(Icons.arrow_back_ios),
@@ -108,10 +108,28 @@ class _MyHomePageState extends State<MyHomePage> {
                           child: Text(
                             'Message',
                             style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 15.0,
-                              color: Colors.white,
-                            ),
+                                fontFamily: 'Comfortaa',
+                                fontWeight: FontWeight.bold,
+                                fontSize: 15.0,
+                                color: Colors.white),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 5.0,
+                        ),
+                        FlatButton(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(7.0),
+                          ),
+                          color: Colors.grey,
+                          onPressed: () {},
+                          child: Text(
+                            "Following",
+                            style: TextStyle(
+                                fontFamily: 'Comfortaa',
+                                fontWeight: FontWeight.bold,
+                                fontSize: 15.0,
+                                color: Colors.white),
                           ),
                         )
                       ],
@@ -120,6 +138,35 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               )
             ],
+          ),
+          // 프로필 영역은 여기 까지
+
+          SizedBox(
+            height: 10.0,
+          ),
+
+          Padding(
+            padding: EdgeInsets.only(left: 15.0, right: 15.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text(
+                  'Menu',
+                  style: TextStyle(
+                      fontFamily: 'Comfortaa',
+                      fontSize: 17.0,
+                      fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  'see all',
+                  style: TextStyle(
+                      fontFamily: 'Comfortaa',
+                      fontSize: 15.0,
+                      color: Colors.grey,
+                      fontWeight: FontWeight.w300),
+                )
+              ],
+            ),
           )
         ],
       ),

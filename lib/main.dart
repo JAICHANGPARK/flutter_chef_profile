@@ -256,6 +256,24 @@ class _MyHomePageState extends State<MyHomePage> {
                       getStar(rating, 4),
                       getStar(rating, 5),
                     ],
+                  ),
+
+                  SizedBox(
+                    height: 4.0,
+                  ),
+
+                  Row(
+                    children: <Widget>[
+                      Icon(
+                        Icons.remove_red_eye,
+                        color: Colors.grey.withOpacity(0.4),
+                      ),
+                      SizedBox(
+                        width: 0.3,
+                      ),
+
+                      
+                    ],
                   )
                 ],
               )

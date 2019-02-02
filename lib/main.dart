@@ -268,15 +268,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Widget getStar(rating, index) {
     if (rating >= index) {
-      return Icon(
-        Icons.star,
-        color: Colors.yellow,
-      );
+      return Icon(Icons.star, color: Colors.yellow);
     } else {
-      return Icon(
-        Icons.star,
-        color: Colors.grey.withOpacity(0.5),
-      );
+      return Icon(Icons.star, color: Colors.grey.withOpacity(0.5));
     }
   }
 }

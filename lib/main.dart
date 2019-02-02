@@ -168,25 +168,26 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
           ),
-          
-          // 카드 뷰 
-          
-          SizedBox(height: 10.0,),
-          
+
+          // 카드 뷰
+
+          SizedBox(
+            height: 10.0,
+          ),
+
           Column(
             children: <Widget>[
-              
-              menuCard('Berry banana milkshake', 'assets/bananabreak.jpg', 'Breakfast', 4, 2.8, 1.2),
-
+              menuCard('Berry banana milkshake', 'assets/bananabreak.jpg',
+                  'Breakfast', 4, 2.8, 1.2),
             ],
           )
-          
         ],
       ),
     );
   }
 
-  Widget menuCard(String title, String imgPath, String type, int rating, double views, double likse){
+  Widget menuCard(String title, String imgPath, String type, int rating,
+      double views, double likse) {
     return Padding(
       padding: EdgeInsets.only(left: 10.0, right: 10.0),
       child: Material(
@@ -200,29 +201,82 @@ class _MyHomePageState extends State<MyHomePage> {
             color: Colors.white,
           ),
 
-          //카드 안에 위젯 처리하기 
+          //카드 안에 위젯 처리하기
           child: Row(
             children: <Widget>[
               //이미지간 간격
-              SizedBox(width: 10.0,),
+              SizedBox(
+                width: 10.0,
+              ),
 
               Container(
                 height: 100.0,
                 width: 100.0,
                 decoration: BoxDecoration(
-                  image: DecorationImage(image: AssetImage(imgPath), fit: BoxFit.cover),
-                  borderRadius: BorderRadius.circular(7.0)
-                ),
+                    image: DecorationImage(
+                        image: AssetImage(imgPath), fit: BoxFit.cover),
+                    borderRadius: BorderRadius.circular(7.0)),
               ),
 
-              SizedBox(width: 10.0,),
+              SizedBox(
+                width: 10.0,
+              ),
 
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start, // 정렬할 축
+                children: <Widget>[
+                  SizedBox(
+                    height: 15.0,
+                  ),
 
+                  // 텍스트
+                  Text(
+                    title,
+                    style: TextStyle(
+                        fontFamily: 'Comfortaa',
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(height: 7.0),
+                  Text(
+                    type,
+                    style: TextStyle(
+                        fontFamily: 'Comfortaa',
+                        color: Colors.grey,
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.w400),
+                  ),
+                  SizedBox(height: 7.0),
+
+                  Row(
+                    children: <Widget>[
+                      getStar(rating, 1),
+                      getStar(rating, 2),
+                      getStar(rating, 3),
+                      getStar(rating, 4),
+                      getStar(rating, 5),
+                    ],
+                  )
+                ],
+              )
             ],
           ),
-
         ),
       ),
     );
+  }
+
+  Widget getStar(rating, index) {
+    if (rating >= index) {
+      return Icon(
+        Icons.star,
+        color: Colors.yellow,
+      );
+    } else {
+      return Icon(
+        Icons.star,
+        color: Colors.grey.withOpacity(0.5),
+      );
+    }
   }
 }

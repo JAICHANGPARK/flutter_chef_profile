@@ -179,6 +179,10 @@ class _MyHomePageState extends State<MyHomePage> {
             children: <Widget>[
               menuCard('Berry banana milkshake', 'assets/bananabreak.jpg',
                   'Breakfast', 4, 2.8, 1.2),
+
+              SizedBox(height: 12.0),
+              menuCard('Fruit pancake', 'assets/fruitbreak.jpeg', 'Breakfast', 4,
+                  4.2, 2.8),
             ],
           )
         ],
@@ -272,18 +276,17 @@ class _MyHomePageState extends State<MyHomePage> {
                         width: 3.0,
                       ),
                       Text(views.toString()),
-
-
-                      SizedBox(width: 10.0,),
+                      SizedBox(
+                        width: 10.0,
+                      ),
                       Icon(
                         Icons.favorite,
                         color: Colors.red,
                       ),
-
-                      SizedBox(width: 3.0,),
+                      SizedBox(
+                        width: 3.0,
+                      ),
                       Text(likse.toString())
-
-
                     ],
                   )
                 ],

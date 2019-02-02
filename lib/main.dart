@@ -185,6 +185,33 @@ class _MyHomePageState extends State<MyHomePage> {
                   4.2, 2.8),
             ],
           )
+          ,
+
+          SizedBox(height: 25.0),
+          Padding(
+            padding: EdgeInsets.only(left: 15.0, right: 15.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text(
+                  'Works',
+                  style: TextStyle(
+                      fontFamily: 'Comfortaa',
+                      fontSize: 17.0,
+                      fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  'see all',
+                  style: TextStyle(
+                      fontFamily: 'Comfortaa',
+                      fontSize: 15.0,
+                      color: Colors.grey,
+                      fontWeight: FontWeight.w300),
+                )
+              ],
+            ),
+          ),
+
         ],
       ),
     );
@@ -198,7 +225,7 @@ class _MyHomePageState extends State<MyHomePage> {
         borderRadius: BorderRadius.circular(7.0),
         elevation: 4.0,
         child: Container(
-          height: 125.0,
+          height: 130.0,
           width: double.infinity,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(7.0),
@@ -250,7 +277,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         fontSize: 14.0,
                         fontWeight: FontWeight.w400),
                   ),
-                  SizedBox(height: 7.0),
+                  SizedBox(height: 10.0),
 
                   Row(
                     children: <Widget>[

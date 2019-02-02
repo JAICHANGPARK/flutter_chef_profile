@@ -179,13 +179,11 @@ class _MyHomePageState extends State<MyHomePage> {
             children: <Widget>[
               menuCard('Berry banana milkshake', 'assets/bananabreak.jpg',
                   'Breakfast', 4, 2.8, 1.2),
-
               SizedBox(height: 12.0),
-              menuCard('Fruit pancake', 'assets/fruitbreak.jpeg', 'Breakfast', 4,
-                  4.2, 2.8),
+              menuCard('Fruit pancake', 'assets/fruitbreak.jpeg', 'Breakfast',
+                  4, 4.2, 2.8),
             ],
-          )
-          ,
+          ),
 
           SizedBox(height: 25.0),
           Padding(
@@ -212,6 +210,19 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
 
+          SizedBox(
+            height: 10.0,
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 15.0, right: 5.0),
+            child: Container(
+              height: 125.0,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: <Widget>[],
+              ),
+            ),
+          )
         ],
       ),
     );
@@ -321,6 +332,20 @@ class _MyHomePageState extends State<MyHomePage> {
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Widget getWorks(String imgPath) {
+    return Padding(
+      padding: EdgeInsets.only(right: 10.0),
+      child: Container(
+        height: 100.0,
+        width: 125.0,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(7.0),
+            image:
+                DecorationImage(image: AssetImage(imgPath), fit: BoxFit.cover)),
       ),
     );
   }

@@ -200,6 +200,7 @@ class _MyHomePageState extends State<MyHomePage> {
             color: Colors.white,
           ),
 
+          //카드 안에 위젯 처리하기 
           child: Row(
             children: <Widget>[
               //이미지간 간격
@@ -212,7 +213,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   image: DecorationImage(image: AssetImage(imgPath), fit: BoxFit.cover),
                   borderRadius: BorderRadius.circular(7.0)
                 ),
-              )
+              ),
+
+              SizedBox(width: 10.0,),
+
+
             ],
           ),
 

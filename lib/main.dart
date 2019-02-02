@@ -68,7 +68,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(50.0),
                       image: DecorationImage(
-                          image: AssetImage(""), fit: BoxFit.cover)),
+                          image: AssetImage("assets/chris.jpg"),
+                          fit: BoxFit.cover)),
                 ),
               ),
               Positioned(
@@ -82,24 +83,28 @@ class _MyHomePageState extends State<MyHomePage> {
                       style: TextStyle(
                           fontWeight: FontWeight.bold, fontSize: 17.0),
                     ),
-                    SizedBox(height: 7.0,),
+                    SizedBox(
+                      height: 7.0,
+                    ),
                     Text(
-                      'Japan/Tokyo', style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 17.0,
-                      color: Colors.grey,
+                      'Japan/Tokyo',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 17.0,
+                        color: Colors.grey,
+                      ),
                     ),
+                    SizedBox(
+                      height: 10.0,
                     ),
-                    SizedBox(height: 10.0,),
                     Row(
                       children: <Widget>[
                         FlatButton(
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(7.0),
-
                           ),
                           color: Color(0xFFFA624F),
-                          onPressed: (){},
+                          onPressed: () {},
                           child: Text(
                             'Message',
                             style: TextStyle(

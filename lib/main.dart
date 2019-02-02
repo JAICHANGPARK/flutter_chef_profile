@@ -269,10 +269,21 @@ class _MyHomePageState extends State<MyHomePage> {
                         color: Colors.grey.withOpacity(0.4),
                       ),
                       SizedBox(
-                        width: 0.3,
+                        width: 3.0,
+                      ),
+                      Text(views.toString()),
+
+
+                      SizedBox(width: 10.0,),
+                      Icon(
+                        Icons.favorite,
+                        color: Colors.red,
                       ),
 
-                      
+                      SizedBox(width: 3.0,),
+                      Text(likse.toString())
+
+
                     ],
                   )
                 ],

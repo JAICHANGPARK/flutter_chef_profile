@@ -228,7 +228,33 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
             ),
-          )
+          ),
+
+          SizedBox(height: 15.0),
+          Padding(
+            padding: const EdgeInsets.only(left: 15.0, right: 15.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text(
+                  'Bought',
+                  style: TextStyle(
+                      fontFamily: 'Comfortaa',
+                      fontSize: 17.0,
+                      fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  'see all',
+                  style: TextStyle(
+                      fontFamily: 'Comfortaa',
+                      fontSize: 15.0,
+                      color: Colors.grey,
+                      fontWeight: FontWeight.w300),
+                )
+              ],
+            ),
+          ),
+          SizedBox(height: 15.0),
         ],
       ),
     );

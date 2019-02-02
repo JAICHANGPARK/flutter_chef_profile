@@ -219,7 +219,13 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 125.0,
               child: ListView(
                 scrollDirection: Axis.horizontal,
-                children: <Widget>[],
+                children: <Widget>[
+                  getWorks('assets/fruitpancake.jpeg'),
+                  getWorks('assets/dumplings.jpeg'),
+                  getWorks('assets/noodles.jpeg'),
+                  
+                  
+                ],
               ),
             ),
           )
